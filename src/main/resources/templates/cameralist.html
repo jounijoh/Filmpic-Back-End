@@ -20,7 +20,7 @@
 			
 			<td th:text="${camera.name}"></td>
 			<td th:text="${camera.filmFormat}"></td>
-			<td><a th:href="@{/deletecamera/{id}(id=${camera.id})}"
+			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/deletecamera/{id}(id=${camera.id})}"
 				class="btn btn-danger">Delete</a></td>
 		</tr>
 	</table>

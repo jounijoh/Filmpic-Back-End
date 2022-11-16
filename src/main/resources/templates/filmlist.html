@@ -23,7 +23,7 @@
 			<td th:text="${film.isoSpeed}"></td>
 			<td th:text="${film.type}"></td>
 			<td th:text="${film.size}"></td>
-			<td><a th:href="@{/deletefilm/{id}(id=${film.filmId})}"
+			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/deletefilm/{id}(id=${film.filmId})}"
 				class="btn btn-danger">Delete</a></td>
 		</tr>
 
