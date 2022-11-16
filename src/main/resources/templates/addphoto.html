@@ -12,7 +12,6 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 	<h1>Add new photograph</h1>
 	<div>
 		<form th:object="${photo}" th:action="savephoto" action="#" method="post">
-		
 			
 			<label for="filmlist">Film used</label> <select id="filmlist"
 				th:field="*{film}" class="form-control">

@@ -24,6 +24,7 @@
 				class="btn btn-danger">Delete</a></td>
 		</tr>
 	</table>
-	<a href="/addcamera" class="btn btn-success">Add new camera</a>
+	<a sec:authorize="hasAuthority('ADMIN')" href="/addcamera" class="btn btn-success">Add new camera</a>
+	<a href="/allphotos" class="btn btn-success">Back to photolist</a>
 </body>
 </html>

@@ -68,7 +68,8 @@
 		</tr>
 	</table>
 
-	<a href="/addphoto" class="btn btn-success">Add photograph</a>
+	<a sec:authorize="hasAuthority('ADMIN')" href="/addphoto" class="btn btn-success">Add photograph</a>
+	<a href="/index" class="btn btn-light">Homepage</a>
 	<div style="clear: both; display: block; height: 10px;"></div>
 
 	<form th:action="@{/logout}" method="post">

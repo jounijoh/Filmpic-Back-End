@@ -3,6 +3,7 @@ package swd20.hh.fi.filmpic.web;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,7 @@ public class FilmController {
 	}
 
 	// Add new film
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/addfilm")
 	public String getAddFilm(Model model) {
 		model.addAttribute("film", new Film());
@@ -36,6 +38,7 @@ public class FilmController {
 	}
 
 	// Save new film
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/savefilm")
 	public String saveFilm(Film film) {
 		filmrepo.save(film);
@@ -44,6 +47,7 @@ public class FilmController {
 	}
 
 	// Add new film when adding photgraph
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/addfilmforphoto")
 	public String getAddFilmForPhoto(Model model) {
 		model.addAttribute("film", new Film());
@@ -52,6 +56,7 @@ public class FilmController {
 	}
 
 	// Save new film when adding photo
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/savefilmforphoto")
 	public String saveFilm(HttpServletRequest request, Film film) {
 		filmrepo.save(film);
@@ -60,6 +65,7 @@ public class FilmController {
 	}
 
 	// Delete Film from database
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/deletefilm/{id}")
 	public String deleteBook(@PathVariable(name = "id") Long filmId) {
 

@@ -18,13 +18,13 @@ import swd20.hh.fi.filmpic.domain.UserRepository;
 
 @SpringBootApplication
 public class FilmpicApplication {
-	//private static final Logger log = LoggerFactory.getLogger(FilmpicApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(FilmpicApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(FilmpicApplication.class, args);
 	}
 
-	/**@Bean
+	@Bean
 	public CommandLineRunner filmPicDemo(PhotographRepository photorepository, FilmRepository filmrepo, 
 			CameraRepository camerarepo, UserRepository userrepo) {
 		return (args) -> {
@@ -54,6 +54,6 @@ public class FilmpicApplication {
 			 }
 		
 	};
-}**/
+}
 		
 }

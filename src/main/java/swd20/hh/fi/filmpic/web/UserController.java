@@ -6,6 +6,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import swd20.hh.fi.filmpic.domain.User;
 import swd20.hh.fi.filmpic.domain.UserRepository;
@@ -33,6 +34,21 @@ public class UserController {
 		
 		return "newuser";
 	}
+	
+	// Save user
+	@PostMapping("/saveuser")
+	public String saveUser(Model model, User user) {
+		user.setRole("USER");
+		userrepo.save(user);
+		return "redirect:/allphotos";
+	}
+	
+	
+	
+	
+	
+	
+	
 	/*Show user Details
 	@GetMapping("/userdetails")
 	public String showUserDetails(@AuthenticationPrincipal ShopmeUserDetails userDetails,

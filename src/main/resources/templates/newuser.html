@@ -4,11 +4,15 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Create new user</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" />
 </head>
 <body>
 	<h1>Create new user</h1>
 		<div>
 			<form th:object="${user}" th:action="saveuser" action="#" method="post">
+				<label for="username"> Username</label>
+				<input type="text" id="username" th:field="*{username}"/><br/>
 				<label for="firstname">First name</label>
 				<input type="text" id="firstname" th:field="*{firstname}"/><br/>
 				<label for="lastname">Last name</label>
@@ -16,7 +20,7 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 				<label for="type">Email</label>
 				<input type="text" id="email" th:field="*{email}"/><br/>
 				<label for="type">Password</label>
-				<input type="text" id="password" th:field="*{password}"/><br/>
+				<input type="text" id="password" th:field="*{passwordHash}"/><br/>
 				<input type="submit" value="Save"></input>
 			</form>
 		</div>
