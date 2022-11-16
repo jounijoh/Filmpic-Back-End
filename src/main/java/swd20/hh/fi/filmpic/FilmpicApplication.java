@@ -35,19 +35,23 @@ public class FilmpicApplication {
 			 userrepo.save(user);
 			 userrepo.save(admin);
 			 
-			 Film ilfordHp = new Film("Ilfor hp", "black and white", "35mm", 400);
+			 Film ilfordHp = new Film("Ilfor hp", "Black and white", "35mm", 400);
+			 Film lomo400 = new Film("Lomography cn", "color", "120", 400);
 			 Film fujisuperia = new Film("Fuji Superia X-tra", "color", "35mm", 400);
+			 filmrepo.save(lomo400);
 			 filmrepo.save(ilfordHp);
 			 filmrepo.save(fujisuperia);
 			 
 			 Camera olympusXa = new Camera("Olympus XA", "35mm");
 			 Camera olympusOm4 = new Camera("Olympus OM4ti", "35mm");
+			 Camera bronica = new Camera("Bronica SQ-A", "6x6");
 			 camerarepo.save(olympusXa);
 			 camerarepo.save(olympusOm4);
+			 camerarepo.save(bronica);
 			 
 			 photorepository.save(new Photograph("Tripla sunset", "Sunset in Tripla", "/images/Triplasunset.jpg/", fujisuperia, olympusOm4, admin));
 			 photorepository.save(new Photograph("Staircase", "Kid with his mom in staircase", "/images/Staircase.jpg/", ilfordHp, olympusXa, admin));
-			 
+			 photorepository.save(new Photograph("Puuhamaa", "Puuhamaa", "/images/Puuhamaa.jpg/", lomo400, bronica, admin));
 			 log.info("Haetaan kuvat");
 			 for (Photograph photo : photorepository.findAll()) {
 				 log.info(photo.toString());

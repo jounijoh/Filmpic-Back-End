@@ -69,11 +69,13 @@
 	</table>
 
 	<a sec:authorize="hasAuthority('ADMIN')" href="/addphoto" class="btn btn-success">Add photograph</a>
-	<a href="/index" class="btn btn-light">Homepage</a>
+	<a href="/index" class="btn btn">Homepage</a>
+	<a href="/allcameras" class="btn btn">Cameras</a>
+	<a href="/allfilms" class="btn btn">Films</a>
 	<div style="clear: both; display: block; height: 10px;"></div>
-
+	
 	<form th:action="@{/logout}" method="post">
-		<input class="btn btn-primary" type="submit" value="Sign Out" />
+		<input class="btn btn-danger" type="submit" value="Sign Out" />
 	</form>
 	
 	<script type="text/javascript">
