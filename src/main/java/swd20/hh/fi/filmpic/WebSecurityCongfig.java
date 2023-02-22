@@ -1,5 +1,4 @@
 package swd20.hh.fi.filmpic;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +24,8 @@ public class WebSecurityCongfig {
         	.antMatchers("/", "/css/**",
         			"/images/**",
         			"/createuser" ,
-        			"/h2**").permitAll() // Enabled when logged out
+        			"/h2**",
+        			"/getphotos").permitAll() // Enabled when logged out
         	.anyRequest().authenticated()
         	.and()
         	  .csrf().ignoringAntMatchers("/h2/**")

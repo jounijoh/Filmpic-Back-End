@@ -9,7 +9,7 @@ public interface PhotographRepository extends CrudRepository<Photograph, Long> {
 	
 	List<Photograph>findByTitle(String title);
 	
-	@Query(value = "SELECT p from Photograph p WHERE CONCAT(p.title, ' ', p.description) LIKE %?1%",
+	@Query(value = "SELECT * from Photograph p WHERE CONCAT(p.title, ' ', p.description) LIKE %?1%",
 			nativeQuery=true)
 	public List<Photograph> search(String keyword);
 }

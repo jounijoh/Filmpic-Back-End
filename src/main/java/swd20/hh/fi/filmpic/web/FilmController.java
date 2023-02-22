@@ -67,7 +67,7 @@ public class FilmController {
 	// Delete Film from database
 	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/deletefilm/{id}")
-	public String deleteBook(@PathVariable(name = "id") Long filmId) {
+	public String deleteFilm(@PathVariable(name = "id") Long filmId) {
 
 		filmrepo.deleteById(filmId); // SQL DELETE
 		return "redirect:/allfilms"; // uudelleenohjaus listaussivulle

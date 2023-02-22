@@ -13,13 +13,13 @@
 
 		<form th:object="${film}" th:action="savefilmforphoto" action="#"
 			method="post">
-			<label for="name">Name</label> <input type="text" id="name"
-				th:field="*{name}" /><br /> <label for="isoSpeed">Iso speed</label>
-			<input type="text" id="isoSpeed" th:field="*{isoSpeed}" /><br /> <label
-				for="type">Type</label> <input type="text" id="type"
-				th:field="*{type}" /><br /> <label for="type">Size</label> <input
-				type="text" id="size" th:field="*{size}" /><br /> <input
-				type="submit" value="Save"></input>
+			<label for="name">Name</label> 
+			<input type="text" id="name" th:field="*{name}" /><br /> 
+			<label for="isoSpeed">Iso speed</label>
+			<input type="text" id="isoSpeed" th:field="*{isoSpeed}" /><br /> 
+			<label for="type">Type</label> 
+			<input type="text" id="type" th:field="*{type}" /><br /> 
+			<input type="submit" value="Save"></input>
 		</form>
 	</div>
 

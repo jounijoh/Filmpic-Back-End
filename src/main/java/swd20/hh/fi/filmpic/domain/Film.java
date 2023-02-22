@@ -17,7 +17,6 @@ public class Film {
 	private Long filmId;
 	private String type;
 	private String name;
-	private String size;
 	private int isoSpeed;
 	
 	@OneToMany
@@ -27,10 +26,9 @@ public class Film {
 	// KONSTRUKTORIT
 	public Film() {}
 	
-	public Film(String name, String type, String size, int isoSpeed) {
+	public Film(String name, String type, int isoSpeed) {
 		this.type = type;
 		this.name = name;
-		this.size = size;
 		this.isoSpeed = isoSpeed;
 	}
 	
@@ -43,9 +41,6 @@ public class Film {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public void setSize(String size) {
-		this.size = size;
 	}
 	public void setIsoSpeed(int isoSpeed) {
 		this.isoSpeed = isoSpeed;
@@ -61,15 +56,12 @@ public class Film {
 	public String getName() {
 		return name;
 	}
-	public String getSize() {
-		return size;
-	}
 	public int getIsoSpeed() {
 		return isoSpeed;
 	}
 	@Override
 	public String toString() {
-		return "Film [id=" + filmId + ", type=" + type + ", name=" + name + ", size=" + size + ", isoSpeed=" + isoSpeed
+		return "Film [id=" + filmId + ", type=" + type + ", name=" + name + ", isoSpeed=" + isoSpeed
 				+ "]";
 	}
 	

@@ -1,5 +1,5 @@
 package swd20.hh.fi.filmpic.domain;
-
+/*
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -77,5 +77,5 @@ public class Photographer {
 	
 	
 }
-
+*/
 

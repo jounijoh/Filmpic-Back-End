@@ -13,9 +13,8 @@
 	<h1>All Photographs</h1>
 	<form th:action="@{/allphotos}">
 		Filter: <input type="text" name="keyword" id="keyword" size="50"
-			th:value="${keyword}" required /> &nbsp; <input type="submit"
-			value="Search" /> &nbsp; <input type="button" value="Clear"
-			id="btnClear" onclick="clearSearch()" />
+			th:value="${keyword}" /> &nbsp; <input type="submit"
+			value="Search" /> &nbsp;
 	</form>
 	<table class="table table-striped">
 		<tr>
@@ -48,8 +47,6 @@
 					<dd th:text="${photo.film.isoSpeed}"></dd>
 					<dt>Type:</dt>
 					<dd th:text="${photo.film.type}"></dd>
-					<dt>Size</dt>
-					<dd th:text="${photo.film.size}"></dd>
 				</dl>
 			</td>
 			<td>

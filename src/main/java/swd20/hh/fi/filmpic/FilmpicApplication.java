@@ -28,16 +28,17 @@ public class FilmpicApplication {
 	public CommandLineRunner filmPicDemo(PhotographRepository photorepository, FilmRepository filmrepo, 
 			CameraRepository camerarepo, UserRepository userrepo) {
 		return (args) -> {
+			/*
 			 log.info("Tallennetaan pari filmiä, kameraa, käyttäjää ja valokuvaa");
 			 
 			 User user = new User("mikko", "mallikas", "user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "user@email", "USER");
-			 User admin = new User("Jouni","Johansson", "admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "jj@email.com", "ADMIN");
+			 User admin = new User("Jouni","Johansson", "jounijoh", "$2a$12$uuLlv3/gd5bOvsXtZpLhgOhfi3YKHBB8JRodKnwU3ICrAf4bc.3ba", "jj@email.com", "ADMIN");
 			 userrepo.save(user);
 			 userrepo.save(admin);
 			 
-			 Film ilfordHp = new Film("Ilfor hp", "Black and white", "35mm", 400);
-			 Film lomo400 = new Film("Lomography cn", "color", "120", 400);
-			 Film fujisuperia = new Film("Fuji Superia X-tra", "color", "35mm", 400);
+			 Film ilfordHp = new Film("Ilfor hp", "Black and white Negative", 400);
+			 Film lomo400 = new Film("Lomography 400", "Color Negative", 400);
+			 Film fujisuperia = new Film("Fuji Superia X-tra", "Color Negative", 400);
 			 filmrepo.save(lomo400);
 			 filmrepo.save(ilfordHp);
 			 filmrepo.save(fujisuperia);
@@ -55,7 +56,7 @@ public class FilmpicApplication {
 			 log.info("Haetaan kuvat");
 			 for (Photograph photo : photorepository.findAll()) {
 				 log.info(photo.toString());
-			 }
+			 }*/
 		
 	};
 }

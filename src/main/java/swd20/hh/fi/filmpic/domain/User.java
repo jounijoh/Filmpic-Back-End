@@ -36,9 +36,9 @@ public class User {
 	
 	private boolean enabled;
 	
-	@OneToMany
-	@JsonIgnoreProperties("user")
-	private List<Photograph> photographs;
+	//@OneToMany
+	//@JsonIgnoreProperties("user")
+	//private List<Photograph> photographs;
 	
 	// KONSTRUKTORIT
 	public User() {
@@ -94,9 +94,9 @@ public class User {
 		this.enabled = enabled;
 	}
 	
-	public void setPhotographs(List<Photograph> photographs) {
-		this.photographs = photographs;
-	}
+	//public void setPhotographs(List<Photograph> photographs) {
+	//	this.photographs = photographs;
+	//}
 
 	// GETTERIT
 	public Long getId() {
@@ -130,10 +130,10 @@ public class User {
 	public boolean isEnabled() {
 		return enabled;
 	}
-	public List<Photograph> getPhotographs() {
+	/*public List<Photograph> getPhotographs() {
 		return photographs;
 	}
-
+*/
 
 
 	

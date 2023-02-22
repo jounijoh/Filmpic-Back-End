@@ -42,7 +42,7 @@ public class PhotographController {
 		return "photolist";
 	}
 	
-	// Add new phtograph
+	// Add new photograph
 	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/addphoto")
 	public String addPhoto(Model model) {
@@ -58,7 +58,7 @@ public class PhotographController {
 	public String savePhoto(Photograph photo) {
 		String filename = photo.getFilePath();
 		photo.setFilePath("/images/" + filename + ".jpg");
-		User user = userrepo.findByUsername("admin");
+		User user = userrepo.findByUsername("jounijoh");
 		photo.setUser(user);
 		photorepo.save(photo);
 		
@@ -91,7 +91,7 @@ public class PhotographController {
 	@PostMapping("/update/{id}")
 	public String updatePhoto(@PathVariable("id") Long id, Model model, Photograph photo) {
 		
-		User user = userrepo.findByUsername("admin");
+		User user = userrepo.findByUsername("jounijoh");
 		photo.setUser(user);
 		photorepo.save(photo);
 		
