@@ -1,4 +1,4 @@
-# filmpicH2
+# Filmpic
 
 Website for storing data of photographs taken on film. 
 Uses MariaDb as database (locally for now)
