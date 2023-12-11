@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
+
 import swd20.hh.fi.filmpic.domain.Camera;
 import swd20.hh.fi.filmpic.domain.CameraRepository;
 import swd20.hh.fi.filmpic.domain.Film;
@@ -17,6 +19,7 @@ import swd20.hh.fi.filmpic.domain.User;
 import swd20.hh.fi.filmpic.domain.UserRepository;
 
 @SpringBootApplication
+@EnableEncryptableProperties
 public class FilmpicApplication {
 	private static final Logger log = LoggerFactory.getLogger(FilmpicApplication.class);
 
