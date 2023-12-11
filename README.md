@@ -1,9 +1,11 @@
-# Filmpic Backend Documentation
-- Check Frontend here: [Frontend](https://github.com/jounijoh/homepage)
+# Filmpic Backend 
 
-## Overview
+The backend for the Filmpic website is a Spring Boot application designed to manage film photographic content, including photographs, films, cameras, and user accounts. It is integrated with local MariaDB for persistent data storage. 
 
-The backend for the Filmpic website is a Spring Boot application designed to manage photographic content, including photographs, films, cameras, and user accounts. It is integrated with MariaDB for persistent data storage.
+### This backend has simple UI frontend built with Thymeleaf
+  ![filmpic-backend-ui](https://github.com/jounijoh/Filmpic-Back-End/assets/95469212/0159e878-bc6b-41f2-894e-5e659a131cf9)
+- *NOTE* backend is not deployed and works only locally for now
+- You can checkout my Filmpic frontend website that utilizes this database here: [Repository](https://github.com/jounijoh/homepage) & [Website](https://jounijoh.github.io/homepage/)
 
 ## Key Features
 
